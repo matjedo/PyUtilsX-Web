@@ -234,21 +234,40 @@ function applyReleaseLinks() {
   });
 }
 
+
 function applySiteLinks() {
-  document.querySelectorAll('[data-site-link]').forEach(link => {
+  // Supports both data-discord-link and data-site-link="discord".
+  document.querySelectorAll('[data-discord-link], [data-site-link="discord"]').forEach(link => {
+    const url = SITE_LINKS.discord;
+
+    if (url && !url.startsWith('COLE_AQUI')) {
+      link.href = url;
+      link.removeAttribute('aria-disabled');
+      link.removeAttribute('title');
+    } else {
+      link.removeAttribute('href');
+      link.setAttribute('aria-disabled', 'true');
+      link.title = 'Discord link not configured yet';
+    }
+  });
+
+  // Supports other configured site links too.
+  document.querySelectorAll('[data-site-link]:not([data-site-link="discord"])').forEach(link => {
     const kind = link.dataset.siteLink;
     const url = SITE_LINKS[kind];
 
     if (url && !url.startsWith('COLE_AQUI')) {
       link.href = url;
+      link.removeAttribute('aria-disabled');
+      link.removeAttribute('title');
     } else {
-      // Avoid sending visitors to an unconfigured placeholder.
       link.removeAttribute('href');
       link.setAttribute('aria-disabled', 'true');
       link.title = 'Link not configured yet';
     }
   });
 }
+
 
 
 // ==========================================
