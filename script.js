@@ -1,16 +1,3 @@
-
-/*
-  PYUTILSX WEBSITE CONFIGURATION
-  ------------------------------
-  1. Configure your Discord and release links below.
-  2. Add or edit apps in TOOLKIT_APPS.
-  3. No HTML edits are needed to add another app card.
-*/
-
-// ==========================================
-// SITE LINKS — EDIT THESE URLS
-// ==========================================
-
 const SITE_LINKS = {
   discord: 'https://discord.gg/bcPcvU8yCC'
 };
@@ -22,13 +9,8 @@ const RELEASE_LINKS = {
   latestStable: 'https://github.com/matjedo/PyUtilsX/releases/latest',
 
   // Replace with the URL of your latest pre-release
-  latestPreRelease: 'COLE_AQUI_O_LINK_DA_ULTIMA_PRE_RELEASE'
+  latestPreRelease: 'https://github.com/matjedo/PyUtilsX/releases/tag/1.2.0.2'
 };
-
-
-// ==========================================
-// THE TOOLKIT — ADD YOUR APPS HERE
-// ==========================================
 
 const TOOLKIT_APPS = [
   {
