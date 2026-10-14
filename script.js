@@ -25,13 +25,13 @@ const TOOLKIT_APPS = [
   },
   {
     name: 'SuperPySearch',
-    status: 'Pre-release',
+    status: 'Stable',
     icon: 'search',
-    tone: 'purple',
+    tone: 'blue',
     description: 'Search for files across a drive or a large folder without manually digging through every directory.',
     tags: ['File search', 'Productivity'],
-    linkLabel: 'Explore pre-releases',
-    release: 'prerelease'
+    linkLabel: 'Get SuperPySearch',
+    release: 'stable'
   },
   {
     name: 'Cipher++',
